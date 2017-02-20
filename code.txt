@@ -1,1 +1,2 @@
 I 'm file from master Branch
+I'm file modified in searchbrowse Branch

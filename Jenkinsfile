@@ -9,7 +9,7 @@ pipeline {
     stage('Build') {
       steps {
         tool name: 'gradlelatest', type: 'gradle'
-        sh 'gradle clean build'
+        sh '/vagrant/tools/hudson.plugins.gradle.GradleInstallation/gradlelatest/bin/gradle clean build'
       }
     }
   }

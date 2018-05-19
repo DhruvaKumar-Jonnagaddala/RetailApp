@@ -10,7 +10,7 @@ pipeline {
       steps {
         tool name: 'jdk8', type: 'jdk'
         tool name: 'gradlelatest', type: 'gradle'
-        sh '/vagrant/tools/hudson.plugins.gradle.GradleInstallation/gradlelatest/bin/gradle clean build'
+        sh 'export JAVA_HOME=/vagrant/tools/hudson.model.JDK/jdk8 && export PATH=$PATH:$JAVA_HOME/bin && /vagrant/tools/hudson.plugins.gradle.GradleInstallation/gradlelatest/bin/gradle clean build'
       }
     }
   }

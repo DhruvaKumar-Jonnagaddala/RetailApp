@@ -8,6 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
+        tool name: 'jdk8', type: 'jdk'
         tool name: 'gradlelatest', type: 'gradle'
         sh '/vagrant/tools/hudson.plugins.gradle.GradleInstallation/gradlelatest/bin/gradle clean build'
       }

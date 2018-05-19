@@ -8,6 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
+        tool name: 'gradlelatest', type: 'gradle'
         sh 'gradle clean build'
       }
     }

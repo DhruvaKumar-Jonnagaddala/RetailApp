@@ -28,7 +28,7 @@ echo "git secrets --scan"'''
         stage('Junit') {
           steps {
             sh 'echo "Executing Junit Test cases"'
-            junit(allowEmptyResults: true, healthScaleFactor: 80, testResults: 'sonarqube-scanner-gradle/build/test-results/test/TEST-AppTest.xml')
+            junit(allowEmptyResults: true, healthScaleFactor: 80, testResults: 'sonarqube-scanner-gradle/build/test-results/**/*.xml')
           }
         }
       }

@@ -25,7 +25,7 @@ echo "git secrets --scan"'''
         stage('Junit') {
           steps {
             sh 'echo "Executing Junit Test cases"'
-            sleep 15
+            sleep 10
           }
         }
       }
@@ -39,7 +39,7 @@ echo "git secrets --scan"'''
     stage('Deploy to Dev') {
       steps {
         sh 'echo "Deploying the artifact to Dev"'
-        sleep 30
+        sleep 10
       }
     }
     stage('BDD Testcases') {
